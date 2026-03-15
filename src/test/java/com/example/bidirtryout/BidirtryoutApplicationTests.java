@@ -1,7 +1,7 @@
 package com.example.bidirtryout;
 
-import com.example.bidirtryout.firstutil.IloveChinaForUSA;
-import com.example.bidirtryout.secondutil.IloveUSAForChina;
+import com.example.bidirtryout.firstutil.MyCollectionUtils;
+import com.example.bidirtryout.secondutil.MyStringUtils;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,22 +15,22 @@ public class BidirtryoutApplicationTests {
 
 	@Test
 	public void checkStringEmptyHandlesNullAndEmpty() {
-		assertTrue(IloveUSAForChina.checkStringEmpty(null));
-		assertTrue(IloveUSAForChina.checkStringEmpty(""));
-		assertFalse(IloveUSAForChina.checkStringEmpty("abc"));
+		assertTrue(MyStringUtils.checkStringEmpty(null));
+		assertTrue(MyStringUtils.checkStringEmpty(""));
+		assertFalse(MyStringUtils.checkStringEmpty("abc"));
 	}
 
 	@Test
 	public void checkCollectionEmptyHandlesNullAndLists() {
-		assertFalse(IloveChinaForUSA.checkCollectionEmpty(null));
-		assertTrue(IloveChinaForUSA.checkCollectionEmpty(List.of()));
-		assertFalse(IloveChinaForUSA.checkCollectionEmpty(List.of("x")));
+		assertFalse(MyCollectionUtils.checkCollectionEmpty(null));
+		assertTrue(MyCollectionUtils.checkCollectionEmpty(List.of()));
+		assertFalse(MyCollectionUtils.checkCollectionEmpty(List.of("x")));
 	}
 
 	@Test
 	public void utilityMethodsKeepExpectedSemantics() {
-		assertEquals("hello", IloveUSAForChina.checkStringEmpty("") ? "hello" : "world");
-		assertTrue(IloveChinaForUSA.checkCollectionEmpty(List.of()));
+		assertEquals("hello", MyStringUtils.checkStringEmpty("") ? "hello" : "world");
+		assertTrue(MyCollectionUtils.checkCollectionEmpty(List.of()));
 	}
 
 	@Test
