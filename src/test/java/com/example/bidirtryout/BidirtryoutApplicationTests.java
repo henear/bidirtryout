@@ -1,13 +1,14 @@
 package com.example.bidirtryout;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class BidirtryoutApplicationTests {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+public class BidirtryoutApplicationTests {
 
 	@Test
-	void contextLoads() {
+	public void testSum() {
+		assertEquals(2 + 3, 5);
 	}
-
 }
